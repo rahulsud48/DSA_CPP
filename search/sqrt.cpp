@@ -11,6 +11,7 @@ int findSQRT(int x)
         s = s/2;
     }
 
+    // Very wrong
     // while ((2*s)^2 < x)
     // {
     //     std::cout<<s<<"\n";
