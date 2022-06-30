@@ -11,6 +11,7 @@ int findSQRT(int x)
         s = s/2;
     }
 
+    //stash after commit
     // Very wrong
     // while ((2*s)^2 < x)
     // {
