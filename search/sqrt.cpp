@@ -14,6 +14,7 @@ int findSQRT(int x)
     //stash after commit
     // Very wrong
     //some changes in main for stashing
+    /// problem-  fix it
     // while ((2*s)^2 < x)
     // {
     //     std::cout<<s<<"\n";
