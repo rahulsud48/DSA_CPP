@@ -2,29 +2,34 @@
 #include<chrono>
 #include<thread>
 
-int findSQRT(int x)
-{
-    int s = x;
-    while ((s/2)*(s/2) > x)
-    {
-        std::cout<<s<<"\n";
-        s = s/2;
-    }
 
-    //stash after commit
-    // Very wrong
-    //some changes in main for stashing
-    /// problem-  fix it
-    // while ((2*s)^2 < x)
-    // {
-    //     std::cout<<s<<"\n";
-    //     s = 2*s; 
-    // }
-    return s;
+int sqRootFloor(int x)
+{
+    int high = x;
+    int low = 1;
+    int mid = (high+low)/2;
+    while (low <= high)
+    {
+        if (mid*mid == x)
+        {
+            return mid;
+        }
+        else if (mid*mid > x)
+        {
+            high = mid - 1;
+        }
+        else
+        {
+            low = mid+1;
+        }
+        mid = (high+low)/2;
+    }
+    return mid;
 }
 
 int main()
 {
-    int x = 25;
-    std::cout << "The SQRT of " << x << " is: " << findSQRT(x) << "\n";
+    int x = 63;
+    int srqt_n = sqRootFloor(x);
+    std::cout << "The SQRT of " << x << " is: " << srqt_n << "\n";
 }
