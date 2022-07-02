@@ -100,7 +100,7 @@ int main()
     int x = 5;
     
     int idx = bs_arr_sorted_efficient(arr, n, x);
-
+    // something
     std::cout<<"The index is: " << idx << "\n";
     //I did something
 }
