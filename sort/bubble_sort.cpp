@@ -9,9 +9,9 @@ void show_array(int* arr, int n)
     std::cout<<"\n";
 }
 
-int bubble(int* arr, int n)
+void bubble(int* arr, int n)
 {
-    for (int j = n-1; j >=1; j--)
+    for (int j = 0; j < n; j++)
     {
         for (int i = 0; i < j; i++)
         {
