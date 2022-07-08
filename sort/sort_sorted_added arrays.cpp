@@ -20,7 +20,7 @@ void sort(int* arr, int n, int low, int mid, int high)
             j++;
         }
         std::cout<<arr[i]<<" ";
-        
+        // not working
     }
 }
 
