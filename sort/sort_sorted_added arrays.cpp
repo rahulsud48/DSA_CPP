@@ -12,6 +12,7 @@ void show_array(int* arr, int n)
 void sort(int* arr, int n, int low, int mid, int high)
 {
     int j = mid + 1;
+    // lets change
     for (int i = 0; i < mid+1; i++)
     {
         while(arr[i] > arr[j])
