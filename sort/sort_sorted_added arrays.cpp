@@ -23,6 +23,11 @@ void sort(int* arr, int n, int low, int mid, int high)
         std::cout<<arr[i]<<" ";
         // not working
     }
+
+    for (j; j<n; j++)
+    {
+        std::cout<<arr[j]<<" ";
+    }
 }
 
 int main()
