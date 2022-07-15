@@ -29,15 +29,24 @@ Node* insert(Node* curr, int x)
     return head;
 }
 
+Node* delete_first(Node* head)
+{
+    Node* curr = head->next;
+    delete head;
+    return curr;
+}
+
 int main()
 {
-    // Node* head = new Node(10);
-    Node* head = NULL;
+    Node* head = new Node(10);
+    // Node* head = NULL;
     int x = 5;
-    // head->next = new Node(20);
-    // head->next->next = new Node(30);
-    // head->next->next->next = new Node(40);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
     head = insert(head, x);
+    traverse_recursive(head);
+    head = delete_first(head);
     traverse_recursive(head);
     return 0;
 
