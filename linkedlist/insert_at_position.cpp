@@ -42,7 +42,7 @@ Node* insert_pos(Node* head, int x, int pos)
     else
     {
         Node* curr = head;
-        int count = 1;
+        int count = 0;
         while (curr->next != NULL or count == pos-1)
         {
             if (pos-1 == count)
