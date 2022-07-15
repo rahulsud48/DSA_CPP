@@ -43,7 +43,7 @@ Node* insert_pos(Node* head, int x, int pos)
     {
         Node* curr = head;
         int count = 0;
-        while (curr->next != NULL)
+        while (curr->next != NULL or count == pos-1)
         {
             if (pos-1 == count)
             {
@@ -51,7 +51,6 @@ Node* insert_pos(Node* head, int x, int pos)
                 Node* next_node = curr->next;
                 curr->next = new_node;
                 new_node->next = next_node;
-                return head;
             }
             curr = curr->next;
             count++;
@@ -63,7 +62,7 @@ Node* insert_pos(Node* head, int x, int pos)
 int main()
 {
     int x = 1;
-    int pos = 3;
+    int pos = 10;
     Node* head = new Node(10);
     // Node* head = NULL;
     head->next = new Node(20);
