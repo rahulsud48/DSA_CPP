@@ -53,6 +53,13 @@ Node* insert_first(Node* head, int x)
     return curr;
 }
 
+Node* delete_first(Node* head)
+{
+    head = head->next;
+    head->prev = NULL;
+    return head;
+}
+
 Node* insert_last(Node* head, int x)
 {
     Node* last = new Node(x);
@@ -63,6 +70,18 @@ Node* insert_last(Node* head, int x)
     }
     curr->next = last;
     last->prev = curr;
+    return head;
+}
+
+Node* delete_last(Node* head)
+{
+    Node* curr = head;
+    while (curr->next != NULL)
+    {
+        curr = curr->next;
+    }
+    curr->prev->next = NULL;
+    delete curr;
     return head;
 }
 
@@ -83,8 +102,11 @@ int main()
 
     head = insert_first(head, 5);
     head = insert_last(head, 40);
+    traverse_recursive(head);
+    head = delete_first(head);
+    head = delete_last(head);
+    traverse_recursive(head);
     traverse_recursive_with_address(head);
-
     // show(head);
     // show(temp1);
     // show(temp2);
