@@ -24,6 +24,25 @@ Node* insert_begin(Node* curr, int x)
     return head;
 }
 
+Node* insert_begin_efficient(Node* head, int x)
+{
+    Node* temp = new Node(x);
+    if (head == NULL)
+    {
+        temp->next = temp;
+        return temp;
+    }
+    else
+    {
+        temp->next = head->next;
+        head->next = temp;
+        int t = head->data;
+        head->data = temp->data;
+        temp->data = t;
+        return head;
+    }
+}
+
 void traverse(Node* head)
 {
     if (head == NULL)
@@ -47,6 +66,6 @@ int main()
     head->next->next->next = new Node(15);
     head->next->next->next->next = head;
 
-    head = insert_begin(head, 25);
+    head = insert_begin_efficient(head, 25);
     traverse(head);
 }
